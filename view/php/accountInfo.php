@@ -61,46 +61,47 @@
     <div class="account-info-container">
         
       <div class="inner-info-container">
-          <p class="info">Username&ratio; <?php echo $result[0]["username"]?> </p>
+          <h1>USERNAME</h1>
+          <p class="info"> <?php echo $result[0]["username"]?> </p>
           <button class="change-button" onclick="showUsername()">
-            <i class="fa-regular fa-pen-to-square fa-lg" style="color: #e5e7eb;"></i>
+            <i class="fa-regular fa-pen-to-square fa-2xl" class="icon"></i>
           </button>
           <input type="hidden" name="username" value="username">
         </div>
         
         <div class="inner-info-container">
-          <p class="info">Password&ratio; <?php echo "********"?> </p>
+          <h1>PASSWORD</h1>
+          <p class="info"><?php echo "********"?> </p>
           <button class="change-button" onclick="showPassword()">
-            <i class="fa-regular fa-pen-to-square fa-lg" style="color: #e5e7eb;"></i>
+            <i class="fa-regular fa-pen-to-square fa-2xl" class="icon"></i>
           </button>
         </div>
         
         <div class="inner-info-container">
-          <p class="info">Email&ratio; <?php echo $result[0]["email"]?> </p>
+          <h1>USERNAME</h1>
+          <p class="info"><?php echo $result[0]["email"]?> </p>
           <button class="change-button" onclick="showEmail()">
-            <i class="fa-regular fa-pen-to-square fa-lg" style="color: #e5e7eb;"></i>
+            <i class="fa-regular fa-pen-to-square fa-2xl" class="icon"></i>
           </button>
         </div>
         
         <div class="inner-info-container">
-          <p class="info">Phone number&ratio; <?php echo $result[0]["phone"]?> </p>
+          <h1>PHONE NUMBER</h1>
+          <p class="info" id="last"><?php echo $result[0]["phone"]?> </p>
           <button class="change-button" onclick="showPhone()">
-            <i class="fa-regular fa-pen-to-square fa-lg" style="color: #e5e7eb;"></i>
           </button>
         </div>
         
         <div class="buttons-container">
           
-          <form action="../../model/database/LogOutUser.php" method="post">
+          <form action="../../model/database/LogOutUser.php" method="post" class="manipulate-form">
             <button class="manipulate-button">
-              <i class="fa-regular fa-circle-xmark fa-lg" style="color: #e5e7eb;"></i>
               Log out
             </button>
           </form>
           
-          <form action="../../model/database/DeleteUserData.php" method="post">
+          <form action="../../model/database/DeleteUserData.php" method="post" class="manipulate-form">
             <button class="manipulate-button" id="delete-account">
-              <i class="fa-solid fa-trash-can fa-lg" style="color: #e5e7eb;"></i>
               Delete
             </button>
           </form>

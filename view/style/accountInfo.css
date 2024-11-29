@@ -101,6 +101,93 @@ body
   margin-left:190px;
 }
 
+.account-info-container
+{
+  background-color: #333333;
+  position: absolute;
+  top:55%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 80px;
+  z-index: 0;
+}
+
+
+h1
+{
+  font-size:35px;
+  color: #a8a2a2;
+  font-weight: 400;
+}
+
+.info
+{
+  color: #858282;
+  margin-left: 6px;
+  font-size:30px;
+  display: inline;
+
+}
+
+
+
+
+
+
+
+.manipulate-button, .manipulate-form
+{
+  display: inline;
+}
+
+.buttons-container
+{
+  margin-top: 20px;
+  display:block;
+  border-top: 2px solid #858282;
+  display:flex;
+  justify-content: space-around;
+}
+
+.manipulate-button
+{
+  margin-top: 20px;
+  font-size:30px;
+  font-family: "Montserrat";
+  padding: 10px 15px;
+  background-color:#222222;
+  color:#c0b9b1;
+  border:none;
+  cursor: pointer;
+  transition: opacity .25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.manipulate-button:hover
+{
+  opacity: 0.8;
+}
+
+.manipulate-button:active
+{
+  opacity: 0.5;
+}
+
+#delete-account
+{
+  background-color:#5f2828;
+}
+
+.change-button
+{
+  display:inline;
+  background:transparent;
+  border:none;
+  color: #858282;
+  cursor: pointer;
+  position:absolute;
+  left:85%;
+  margin-top:10px;
+}
 
 
 @media only screen and (min-width:1281px)
