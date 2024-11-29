@@ -78,7 +78,7 @@
         </div>
         
         <div class="inner-info-container">
-          <h1>USERNAME</h1>
+          <h1>EMAIL</h1>
           <p class="info"><?php echo $result[0]["email"]?> </p>
           <button class="change-button" onclick="showEmail()">
             <i class="fa-regular fa-pen-to-square fa-2xl" class="icon"></i>
@@ -89,6 +89,7 @@
           <h1>PHONE NUMBER</h1>
           <p class="info" id="last"><?php echo $result[0]["phone"]?> </p>
           <button class="change-button" onclick="showPhone()">
+          <i class="fa-regular fa-pen-to-square fa-2xl" class="icon"></i>
           </button>
         </div>
         
@@ -116,34 +117,34 @@
       <input type="text" name="new-value" placeholder="New username">
       <input type="hidden" name="field" value="username">
       
-      <button class="save-button">
-        <i class="fa-solid fa-check fa-lg" style="color: #e5e7eb;"></i>
-        Save
-      </button>
-      
-      <button type="button" class="close-button" onclick="hideUsername()">
-        <i class="fa-solid fa-x" style="color: #e5e7eb;"></i>
-        Close
-      </button>
-    
+      <div class="change-buttons-container">
+        <button class="manipulate-button">
+          Save
+        </button>
+        
+        <button type="button" class="close-button" onclick="hideUsername()">
+          Close
+        </button>
+      </div>
     </form>
 
-    
+
     <form action="../../model/database/UpdateUserData.php" method="post" class="change-form" id="change-password-form">
       
       <input type="password" name="new-value" placeholder="New password">
       <input type="password" name="new-value" placeholder="Confirm password">
       <input type="hidden" name="field" value="passwrd">
       
-      <button class="save-button">
-        <i class="fa-solid fa-check fa-lg" style="color: #e5e7eb;"></i>
-        Save
-      </button>
-      
-      <button type="button" class="close-button" onclick="hidePassword()">
-        <i class="fa-solid fa-x" style="color: #e5e7eb;"></i>
-        Close
-      </button>
+
+      <div class="change-buttons-container">
+        <button class="manipulate-button">
+          Save
+        </button>
+        
+        <button type="button" class="close-button" onclick="hidePassword()">
+          Close
+        </button>
+      </div>
     
     </form>
 
@@ -153,16 +154,19 @@
       <input type="email" name="new-value" placeholder="New email">
       <input type="hidden" name="field" value="email">
       
-      <button class="save-button">
-        <i class="fa-solid fa-check fa-lg" style="color: #e5e7eb;"></i>
-        Save
-      </button>
+      <div class="change-buttons-container">
+
+        <button class="manipulate-button" onclick="showEmail()">
+          Save
+        </button>
+        
+        
+        <button type="button" class="close-button" onclick="hideEmail()">
+          Close
+        </button>
+
+      </div>
       
-      
-      <button type="button" class="close-button" onclick="hideEmail()">
-        <i class="fa-solid fa-x" style="color: #e5e7eb;"></i>
-        Close
-      </button>
     
     </form>
 
@@ -172,18 +176,21 @@
       <input type="text" name="new-value" placeholder="New phone number">
       <input type="hidden" name="field" value="phone">
       
+      <div class="change-buttons-container">
+
+        <button class="manipulate-button" onclick="showPhone()">
+          Save
+        </button>
+        
+        <button type="button" class="close-button" onclick="hidePhone()">
+          Close
+        </button>
+      </div>
       
-      <button class="save-button">
-        <i class="fa-solid fa-check fa-lg" style="color: #e5e7eb;"></i>
-        Save
-      </button>
       
-      <button type="button" class="close-button" onclick="hidePhone()">
-        <i class="fa-solid fa-x" style="color: #e5e7eb;"></i>
-        Close
-      </button>
     
     </form>
+
 
 <script src="../js/accountInfo.js"></script>
 </body>
