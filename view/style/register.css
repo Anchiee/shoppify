@@ -1,0 +1,299 @@
+body
+{
+  background-image: url(../../model/assets/background.svg);
+  font-family: "Montserrat";
+  color: white;
+}
+
+#chosen-option
+{
+  color:rgb(192, 185, 177);
+  position:relative;
+}
+
+#chosen-option::before
+{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:2px;
+  background-color: rgb(192, 185, 177);
+}
+
+
+.nav
+{
+  display:flex;
+  justify-content: space-around;
+  height:65px;
+}
+
+
+.nav-options
+{
+  display:inline-block;
+  text-decoration: none;
+  color:white;
+  display:flex;
+  align-items: center;
+  font-size:20px;
+  font-weight: bold;
+  position:relative;
+}
+
+.nav-options::before
+{
+  content:"";
+  position:absolute;
+  width:0;
+  left:0;
+  bottom:0;
+  height:2px;
+  background-color: white;
+  transition:width 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.nav-options:hover::before
+{
+  width:100%;
+}
+
+
+form
+{
+  background-color: #333333;
+  display:inline-block;
+  position:absolute;
+  left:50%;
+  bottom:-30%;
+  transform:translate(-50%, -50%);
+  padding: 50px 100px;
+  border-radius: 0.3rem;
+}
+
+
+.input
+{
+  display:block;
+  background-color:#333333;
+  border:none;
+  outline:none;
+  color:#c0b9b1;
+  font-family:"Montserrat";
+  border-bottom: 2px solid #c0b9b1;
+  padding-bottom:6px;
+  width:100%;
+  font-size:18px;
+  margin-bottom:40px;
+}
+
+.input-error
+{
+  border-bottom: 2px solid red;
+}
+
+.input-error::placeholder
+{
+  color:red;
+  font-weight:lighter;
+}
+
+.sign-button
+{
+  display:block;
+  margin-left:60px;
+  padding:20px 40px;
+  background-color:#222222;
+  color:#c0b9b1;
+  border:none;
+  font-family: "Montserrat";
+  font-size:17px;
+  transition: opacity 0.4s;
+  cursor:pointer;
+}
+
+.sign-button:hover
+{
+  opacity:0.8;
+}
+
+.sign-button:active
+{
+  opacity:0.5;
+}
+
+
+.login-option
+{
+  color:#653865;
+  text-decoration:none;
+  font-weight:bold;
+  transition:color 0.25s;
+}
+
+.login-option:hover
+{
+  color:#8b528b;
+}
+
+.login-option:active
+{
+  opacity:0.6;
+}
+
+
+.login-text
+{
+  color:#c0b9b1;
+}
+
+.login-container
+{
+  margin-top:40px;
+}
+
+
+.platforms-text
+{
+  font-size:14px;
+  color:#858282;
+  text-align:center;
+  margin-top:45px;
+  position:relative;
+  padding-bottom:10px;
+}
+
+.platforms-text::before
+{
+  content:"";
+  position:absolute;
+  height:0.5px;
+  width:100%;
+  left:0;
+  bottom:0;
+  background-color:#858282;
+}
+
+.platforms
+{
+  display:flex;
+  justify-content:space-around;
+  padding-top:10px;
+  cursor:pointer;
+}
+
+.hamburger-nav
+{
+  overflow:hidden;
+  position:relative;
+  padding:10px 0px 15px 7px;
+  margin-top:10px;
+
+}
+
+.hamburger-nav a
+{
+  display:block;
+  font-size:30px;
+  margin-bottom:10px;
+  margin-top:20px;
+  text-decoration:none;
+  color:white;
+
+}
+
+#icon
+{
+  display:inline;
+  padding-top:5px;
+}
+
+#links
+{
+  display:none;
+}
+
+.hamburger-header
+{
+  display:inline;
+  font-weight:bold;
+  font-size:25px;
+  margin-left:190px;
+}
+
+@media only screen and (max-width: 767px)
+{
+  .nav
+  {
+    display:none;
+  }
+
+
+  .sign-container
+  {
+    padding: 40px 80px;
+    bottom: -25%;
+  }
+
+  .input
+  {
+    font-size:18px;
+  }
+
+  .sign-button
+  {
+    width:150px;
+    margin-right:50px;
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1280px)
+{
+  .hamburger-nav
+  {
+    display:none;
+  }
+
+  .sign-container
+  {
+    bottom: -25%;
+    padding: 50px 150px;
+  }
+
+  .input
+  {
+    padding-bottom:6px;
+    padding-right: 10px;
+    width:200%;
+    font-size:23px;
+    margin-bottom:50px;
+    margin-left:-70px;
+  }
+
+  .sign-button
+  {
+    margin-left:-10px;
+    padding:30px 50px;
+    font-size:23px;
+    width:140%;
+  }
+
+
+  .login-option, .login-text
+  {
+    font-size: 20px;
+  }
+
+  
+}
+
+@media only screen and (min-width: 1281px)
+{
+  .hamburger-nav
+  {
+    display:none;
+  }
+}

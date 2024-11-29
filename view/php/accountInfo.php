@@ -1,0 +1,189 @@
+
+<?php
+
+  require "../../model/database/ReadUsername.inc.php";
+  require "../../configurations/config.inc.php";
+
+  set_error_handler(function ($errno, $errstr, $errfile, $errline) {
+    throw new ErrorException($errstr, $errno, 0, $errfile, $errline);
+  });
+  
+
+  try {
+    $result = ReadUsername($_SESSION["username"]);
+  } catch(Exception $e) {
+    echo "You have to log in!";
+    die();
+  }
+  
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Account info</title>
+  <link rel="stylesheet" href="../style/accountInfo.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="nav">
+      <a href="./register.php" class="nav-options">Sign-in</a>
+      <a href="../../controller/UserRedirect.php" class="nav-options">Log-in</a>
+      <a href="./about.php" class="nav-options">About</a>
+      <a href="./contact.php" class="nav-options">Contact</a>
+      <a href="./shop.php" class="nav-options">Shop</a>
+      <a href="#" class="nav-options" id="chosen-option">Acccount info</a>
+    </div>
+
+    <div class="hamburger-nav">
+      <a href="javascript:void(0);" onclick="navManipulation()" id="icon">
+        <i class="fa-solid fa-bars fa-2xl" style="color: #c3b1ad;"></i>
+      </a>
+      <p class="hamburger-header">Shoppify</p>
+
+      <div id="links">
+        <a href="./register.php">Sign-in</a>
+        <a href="./about.php">About</a>
+        <a href="./contact.php">Contact</a>
+        <a href="./shop.php">Shop</a>
+        <a href="../../controller/UserRedirect.php">Log-in</a> 
+      </div>
+    </div>
+
+    <div class="account-info-container">
+        
+      <div class="inner-info-container">
+          <p class="info">Username&ratio; <?php echo $result[0]["username"]?> </p>
+          <button class="change-button" onclick="showUsername()">
+            <i class="fa-regular fa-pen-to-square fa-lg" style="color: #e5e7eb;"></i>
+          </button>
+          <input type="hidden" name="username" value="username">
+        </div>
+        
+        <div class="inner-info-container">
+          <p class="info">Password&ratio; <?php echo "********"?> </p>
+          <button class="change-button" onclick="showPassword()">
+            <i class="fa-regular fa-pen-to-square fa-lg" style="color: #e5e7eb;"></i>
+          </button>
+        </div>
+        
+        <div class="inner-info-container">
+          <p class="info">Email&ratio; <?php echo $result[0]["email"]?> </p>
+          <button class="change-button" onclick="showEmail()">
+            <i class="fa-regular fa-pen-to-square fa-lg" style="color: #e5e7eb;"></i>
+          </button>
+        </div>
+        
+        <div class="inner-info-container">
+          <p class="info">Phone number&ratio; <?php echo $result[0]["phone"]?> </p>
+          <button class="change-button" onclick="showPhone()">
+            <i class="fa-regular fa-pen-to-square fa-lg" style="color: #e5e7eb;"></i>
+          </button>
+        </div>
+        
+        <div class="buttons-container">
+          
+          <form action="../../model/database/LogOutUser.php" method="post">
+            <button class="manipulate-button">
+              <i class="fa-regular fa-circle-xmark fa-lg" style="color: #e5e7eb;"></i>
+              Log out
+            </button>
+          </form>
+          
+          <form action="../../model/database/DeleteUserData.php" method="post">
+            <button class="manipulate-button" id="delete-account">
+              <i class="fa-solid fa-trash-can fa-lg" style="color: #e5e7eb;"></i>
+              Delete
+            </button>
+          </form>
+        
+        </div>
+
+      </div>
+    </div>
+
+    <form action="../../model/database/UpdateUserData.php" method="post" class="change-form" id="change-username-form">
+      
+      <input type="text" name="new-value" placeholder="New username">
+      <input type="hidden" name="field" value="username">
+      
+      <button class="save-button">
+        <i class="fa-solid fa-check fa-lg" style="color: #e5e7eb;"></i>
+        Save
+      </button>
+      
+      <button type="button" class="close-button" onclick="hideUsername()">
+        <i class="fa-solid fa-x" style="color: #e5e7eb;"></i>
+        Close
+      </button>
+    
+    </form>
+
+    
+    <form action="../../model/database/UpdateUserData.php" method="post" class="change-form" id="change-password-form">
+      
+      <input type="password" name="new-value" placeholder="New password">
+      <input type="password" name="new-value" placeholder="Confirm password">
+      <input type="hidden" name="field" value="passwrd">
+      
+      <button class="save-button">
+        <i class="fa-solid fa-check fa-lg" style="color: #e5e7eb;"></i>
+        Save
+      </button>
+      
+      <button type="button" class="close-button" onclick="hidePassword()">
+        <i class="fa-solid fa-x" style="color: #e5e7eb;"></i>
+        Close
+      </button>
+    
+    </form>
+
+    
+    <form action="../../model/database/UpdateUserData.php" method="post" class="change-form" id="change-email-form">
+      
+      <input type="email" name="new-value" placeholder="New email">
+      <input type="hidden" name="field" value="email">
+      
+      <button class="save-button">
+        <i class="fa-solid fa-check fa-lg" style="color: #e5e7eb;"></i>
+        Save
+      </button>
+      
+      
+      <button type="button" class="close-button" onclick="hideEmail()">
+        <i class="fa-solid fa-x" style="color: #e5e7eb;"></i>
+        Close
+      </button>
+    
+    </form>
+
+    
+    <form action="../../model/database/UpdateUserData.php" method="post" class="change-form" id="change-phone-form">
+      
+      <input type="text" name="new-value" placeholder="New phone number">
+      <input type="hidden" name="field" value="phone">
+      
+      
+      <button class="save-button">
+        <i class="fa-solid fa-check fa-lg" style="color: #e5e7eb;"></i>
+        Save
+      </button>
+      
+      <button type="button" class="close-button" onclick="hidePhone()">
+        <i class="fa-solid fa-x" style="color: #e5e7eb;"></i>
+        Close
+      </button>
+    
+    </form>
+
+<script src="../js/accountInfo.js"></script>
+</body>
+</html>
