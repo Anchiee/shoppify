@@ -62,7 +62,7 @@
         
       <div class="inner-info-container">
           <h1>USERNAME</h1>
-          <p class="info"> <?php echo $result[0]["username"]?> </p>
+          <p class="info"> <?php echo $result[0]["username"]; ?> </p>
           <button class="change-button" onclick="showUsername()">
             <i class="fa-regular fa-pen-to-square fa-2xl" class="icon"></i>
           </button>
@@ -112,7 +112,7 @@
       </div>
     </div>
 
-    <form action="../../model/database/UpdateUserData.php" method="post" class="change-form" id="change-username-form">
+    <form action="../../controller/FormHandlerUpdate.php" method="post" class="change-form" id="change-username-form">
       
       <input type="text" name="new-value" placeholder="New username">
       <input type="hidden" name="field" value="username">
@@ -129,10 +129,9 @@
     </form>
 
 
-    <form action="../../model/database/UpdateUserData.php" method="post" class="change-form" id="change-password-form">
+    <form action="../../controller/FormHandlerUpdate.php" method="post" class="change-form" id="change-password-form">
       
       <input type="password" name="new-value" placeholder="New password">
-      <input type="password" name="new-value" placeholder="Confirm password">
       <input type="hidden" name="field" value="passwrd">
       
 
@@ -149,7 +148,7 @@
     </form>
 
     
-    <form action="../../model/database/UpdateUserData.php" method="post" class="change-form" id="change-email-form">
+    <form action="../../controller/FormHandlerUpdate.php" method="post" class="change-form" id="change-email-form">
       
       <input type="email" name="new-value" placeholder="New email">
       <input type="hidden" name="field" value="email">
@@ -171,7 +170,7 @@
     </form>
 
     
-    <form action="../../model/database/UpdateUserData.php" method="post" class="change-form" id="change-phone-form">
+    <form action="../../controller/FormHandlerUpdate.php" method="post" class="change-form" id="change-phone-form">
       
       <input type="text" name="new-value" placeholder="New phone number">
       <input type="hidden" name="field" value="phone">
