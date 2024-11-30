@@ -5,8 +5,8 @@
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
 
-  require "../model/database/CheckUser.inc.php";
-  require "../configurations/config.inc.php";
+  require "../model/database/CheckUser.php";
+  require "../configurations/config.php";
   
   $usernamePOST = htmlspecialchars($_POST["username"]);
   $passwordPOST = htmlspecialchars($_POST["password"]);
@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     die();
   }
 
-  if(checkPassword($usernamePOST, $passwordPOST))
+  else if(checkPassword($usernamePOST, $passwordPOST))
   {
     $_SESSION["username"] = $usernamePOST;
     header("Location: ../view/php/accountInfo.php");
