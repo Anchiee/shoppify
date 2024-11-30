@@ -15,7 +15,7 @@
 <p>This project is under the MIT License read the <a href="https://github.com/Anchiee/shoppify/blob/main/LICENSE">license</a> before using this project</p>
 
 <h2>Description</h2>
-<p>The website is a shop <bold>simulation</bold> website that mimics a real shop website. Note that this project is <b>NOT</b> finished meaning that it will either contain bugs or not be on the internet. </p>
+<p>The website is a shop <bold>simulation</bold> website that mimics a real shop website. Note that this project is <b>NOT</b> finished meaning that it will either contain bugs/some features wont be finished or not be on the internet. </p>
 
 <h2>Installation</h2>
 
