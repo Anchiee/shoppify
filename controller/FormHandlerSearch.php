@@ -5,7 +5,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET")
 {
   $product = htmlspecialchars(strtolower($_GET["search"]));
 
-  require "../configurations/config.inc.php";
+  require "../configurations/config.php";
 
   $_SESSION["productName"] = $product;
 

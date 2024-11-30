@@ -30,7 +30,7 @@ function updateUser($field, $newValue)
 
   try
   {
-    require "dbh.inc.php";
+    require "../model/database/dbh.php";
     $stmt = $pdo->prepare($query);
 
     $stmt->bindParam(":sessionUsername", $user);

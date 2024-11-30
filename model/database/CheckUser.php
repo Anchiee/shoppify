@@ -5,7 +5,7 @@
 function userExists($username)
 {
   try{
-    require "dbh.inc.php";
+    require "dbh.php";
 
     $query = "SELECT username FROM users WHERE username = :username;";
     $stmt = $pdo->prepare($query);
@@ -26,7 +26,7 @@ function userExists($username)
 function checkPassword($usernamePOST, $passwordPOST)
 {
   try {
-    require "dbh.inc.php"; 
+    require "dbh.php"; 
 
     $query = "SELECT username, passwrd FROM users WHERE username = :username;";
     $stmt = $pdo->prepare($query);

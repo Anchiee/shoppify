@@ -4,7 +4,7 @@
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-  require_once "../model/database/CheckUser.inc.php";
+  require_once "../model/database/CheckUser.php";
   require "../model/database/InsertUser.php";
 
   

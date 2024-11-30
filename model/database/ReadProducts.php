@@ -4,7 +4,7 @@ function returnProducts($productName)
 {
   try {
 
-    require "dbh.inc.php";
+    require "dbh.php";
 
     $query = "SELECT id, productName, company FROM products WHERE productName = :productName OR company = :productName 
     OR id = :productName;";

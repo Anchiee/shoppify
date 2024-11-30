@@ -4,8 +4,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 {
   try {
 
-    require "dbh.inc.php";
-    require "../../configurations/config.inc.php";
+    require "dbh.php";
+    require "../../configurations/config.php";
 
     $username = $_SESSION["username"];
 

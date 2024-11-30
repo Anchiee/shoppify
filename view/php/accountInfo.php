@@ -1,8 +1,8 @@
 
 <?php
 
-  require "../../model/database/ReadUsername.inc.php";
-  require "../../configurations/config.inc.php";
+  require "../../model/database/ReadUsername.php";
+  require "../../configurations/config.php";
 
   set_error_handler(function ($errno, $errstr, $errfile, $errline) {
     throw new ErrorException($errstr, $errno, 0, $errfile, $errline);

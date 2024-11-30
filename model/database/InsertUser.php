@@ -5,8 +5,8 @@ function AddUser($username, $password, $email, $phone)
 {
   try {
 
-    require "../model/database/dbh.inc.php";
-    require_once "../configurations/config.inc.php";
+    require "../model/database/dbh.php";
+    require_once "../configurations/config.php";
 
     $query = "INSERT INTO users(username, passwrd, email, phone) VALUES(:username, :passwrd, :email, :phone);";
     $stmt = $pdo->prepare($query);
