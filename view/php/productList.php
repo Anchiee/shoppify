@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="../style/header.css">
   <link rel="stylesheet" href="../style/body.css">
   <link rel="stylesheet" href="../style/productList.css">
+  <link rel="stylesheet" href="../style/shop.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,8 +21,8 @@
     <a href="./register.php" class="nav-options">Sign-in</a>
     <a href="../../controller/UserRedirect.php" class="nav-options">Log-in</a>
     <a href="./about.php" class="nav-options">About</a>
-    <a href="#" class="nav-options" id="chosen-option">Contact</a>
-    <a href="./shop.php" class="nav-options">Shop</a>
+    <a href="./contact.php" class="nav-options">Contact</a>
+    <a href="#" class="nav-options" id="chosen-option">Shop</a>
     <a href="./accountInfo.php" class="nav-options">Account info</a>
   </div>
 
@@ -41,6 +42,12 @@
       <a href="./shop.php">Shop</a>
       <a href="./accountInfo.php">Account info</a>
     </div>
+
+
+    <form action="../../controller/FormHandlerSearch.php" method="get">
+        <input type="search" placeholder="Search for products" class="search-input" name="search">
+        <button>Search</button>
+    </form>
 
     <div class="container">
       <?php 
@@ -85,7 +92,7 @@
             }
           }
 
-          echo "<button>Check out</button>";
+          echo "<button class='check-out'>Check out</button>";
 
           echo "</div>";
         }
