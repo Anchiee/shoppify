@@ -1,0 +1,13 @@
+.container
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-container
+{
+  margin: 50px;
+  background-color: #333333;
+  padding: 20px 45px;
+  border-radius: 3px;
+}

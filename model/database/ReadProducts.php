@@ -6,7 +6,7 @@ function returnProducts($productName)
 
     require "dbh.php";
 
-    $query = "SELECT id, productName, company FROM products WHERE productName = :productName OR company = :productName 
+    $query = "SELECT * FROM products WHERE productName = :productName OR company = :productName 
     OR id = :productName;";
     $stmt = $pdo->prepare($query);
 
