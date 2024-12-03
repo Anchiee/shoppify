@@ -3,11 +3,20 @@
 
 if($_SERVER["REQUEST_METHOD"] == "GET")
 {
-  $product = htmlspecialchars(strtolower($_GET["search"]));
 
+  require "../model/database/ReadProducts.php";
   require "../configurations/config.php";
 
-  $_SESSION["productName"] = $product;
+  $product = htmlspecialchars(strtolower($_GET["search"]));
+
+  if(empty($product))
+  {
+    echo "dont leave the input empty";
+    die();
+  }
+
+  $_SESSION["product"] = $product;
+
 
   header("Location: ../view/php/productList.php");
   die();
