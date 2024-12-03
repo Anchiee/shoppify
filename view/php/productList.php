@@ -1,6 +1,11 @@
 <?php
 
+
 require "../../model/database/ReadProducts.php";
 require "../../configurations/config.php";
 
-print_r(returnProducts($_SESSION["productName"]));
+$productName = $_SESSION["product"];
+
+$result = returnProducts($productName);
+
+print_r($result);
