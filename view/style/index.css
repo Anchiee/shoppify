@@ -1,48 +1,3 @@
-body
-{
-  background-image: url(../../model/assets/background.svg);
-  color: white;
-  margin: 0 0 0 0;
-  font-family:"Montserrat";
-}
-
-.nav
-{
-  height:65px;
-  display:flex;
-  justify-content: space-around;
-}
-
-
-.nav-options
-{
-  display:inline-block;
-  text-decoration: none;
-  color:white;
-  display:flex;
-  align-items: center;
-  font-size:20px;
-  font-weight: bold;
-  position:relative;
-}
-
-
-.nav-options::before
-{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:0;
-  height:2px;
-  width:0;
-  background-color:white;
-  transition: width 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
-}
-
-.nav-options:hover::before
-{
-  width:100%;
-}
 
 
 .shop-body
@@ -114,53 +69,11 @@ body
 }
 
 
-.hamburger-nav
-{
-  overflow:hidden;
-  position:relative;
-  padding:10px 0px 15px 7px;
-  margin-top:10px;
-  position:relative;
-}
-
-.hamburger-nav a
-{
-  display:block;
-  font-size:30px;
-  margin-bottom:10px;
-  margin-top:20px;
-  text-decoration:none;
-  color:white;
-
-}
-
-#icon
-{
-  display:inline;
-  padding-top:5px;
-}
-
-#links
-{
-  display:none;
-}
-
-.hamburger-header
-{
-  display:inline;
-  font-weight:bold;
-  font-size:25px;
-  margin-left:190px;
-}
-
 
 
 @media only screen and (max-width: 767px)
 {
-  .nav
-  {
-    display:none;
-  }
+
   .header
   {
     display:none;
@@ -189,10 +102,6 @@ body
 
 @media only screen and (min-width: 768px) and (max-width: 1280px)
 {
-  .hamburger-nav
-  {
-    display:none;
-  }
 
   .header
   {
@@ -219,13 +128,5 @@ body
   .description-paragraph
   {
     margin-left:-590px;
-  }
-}
-
-@media only screen and (min-width: 1281px)
-{
-  .hamburger-nav
-  {
-    display:none;
   }
 }
