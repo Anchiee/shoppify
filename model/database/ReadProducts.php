@@ -25,6 +25,29 @@ function returnProducts($productName)
   }
 }
 
+function returnAllProducts()
+{
+  try {
+
+    require "dbh.php";
+
+    $query = "SELECT * FROM products;";
+    $stmt = $pdo->prepare($query);
+    
+    $stmt->execute();
+
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $pdo = null;
+    $stmt = null;
+
+    return $result;
+
+  } catch(PDOException $e) {
+    return "Query failed:" . $e->getMessage();
+  }
+}
+
 
 function returnCart()
 {
