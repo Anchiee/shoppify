@@ -42,7 +42,7 @@
       </div>
     </div>
 
-    <form action="../../controller/FormHandlerSearch.php" method="get">
+    <form action="../../controller/FormHandlerSearch.php" method="get" class="search-form">
         <input type="search" placeholder="Search for products" class="search-input" name="search">
         <button>Search</button>
     </form>

@@ -44,7 +44,7 @@
     </div>
 
 
-    <form action="../../controller/FormHandlerSearch.php" method="get">
+    <form action="../../controller/FormHandlerSearch.php" method="get" class="search-form">
         <input type="search" placeholder="Search for products" class="search-input" name="search">
         <button>Search</button>
     </form>
@@ -60,11 +60,11 @@
 
         foreach($result as $column)
         {
-          echo "<div class='product-container'>";
+          echo "<form action='../../controller/FormHandlerCart.php' method='post' class='product-container'>"; 
           foreach($column as $row => $value)
           {
             
-
+            
             if($row == "id")
             {
               echo "<p>ID: $value</p>";
@@ -73,6 +73,11 @@
             if($row == "productName")
             {
               echo "<h1>$value </h1>";
+              continue;
+            }
+            else if($row == "price")
+            {
+              echo "<p>$value$ </p>";
               continue;
             }
             else if($row == "base_clock")
@@ -94,7 +99,7 @@
 
           echo "<button class='check-out'>Add to cart</button>";
 
-          echo "</div>";
+          echo "</form>";
         }
 
       ?>

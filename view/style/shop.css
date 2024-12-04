@@ -15,7 +15,7 @@
   color: rgb(192, 185, 177);
 }
 
-form
+.search-form
 {
   position:absolute;
   left:50%;
