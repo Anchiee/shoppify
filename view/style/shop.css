@@ -23,19 +23,6 @@
   transform:translate(-50%, -50%);
 }
 
-button
-{
-  margin-left:60px;
-  padding:20px 40px;
-  background-color:#333333;
-  color:#c0b9b1;
-  border:none;
-  font-family: "Montserrat";
-  font-size:17px;
-  transition: background-color 0.4s;
-  border-radius: 5px;
-  cursor:pointer;
-}
 
 button:hover
 {
