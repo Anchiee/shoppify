@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="../style/shop.css">
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/body.css">
+    <link rel="stylesheet" href="../style/productList.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,10 +49,34 @@
     </form>
 
 
-    <?php
-    
+    <div class="container">
+      <p class="suggested-header">Suggested products</p>
+      <?php
+        require "../../model/database/ReadProducts.php";
 
-    ?>
+        $result = returnAllProducts();
+        
+        for($i = 0; $i < 3; $i++)
+        {
+          $randomProductIndex = rand(0, sizeof($result));
+
+          echo "<form action='../../controller/FormHandlerCart.php' method='post' class='product-container'>"; 
+          echo "<p>ID:" . $result[$randomProductIndex]["id"] . "</p>";
+          echo "<h1>ID:" . $result[$randomProductIndex]["productName"] . "</h1>";
+          echo "<input type='hidden' name='product-name' value='" . $result[$randomProductIndex]["productName"] . "'>";
+          echo "<p>ID:" . $result[$randomProductIndex]["price"] . "</p>";
+          echo "<h2>Processor speed</h2>";
+          echo "<p>Base clock speed:" . $result[$randomProductIndex]["base_clock"] . "</p>";
+          echo "<p>Boosted clock speed:" . $result[$randomProductIndex]["boosted_clock"] . "</p>";
+          echo "<p>ROMStorage:" . $result[$randomProductIndex]["ROMStorage"] . "</p>";
+          echo "<p>RAMStorage:" . $result[$randomProductIndex]["RAMStorage"] . "</p>";
+          echo "<button class='check-out'>Add to cart</button>";
+          echo "</form>";
+        }
+
+        
+      ?>
+    </div>
 
 
 
