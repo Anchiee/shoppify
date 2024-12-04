@@ -50,7 +50,7 @@
 
 
     <div class="container">
-      <p class="suggested-header">Suggested products</p>
+      
       <?php
         require "../../model/database/ReadProducts.php";
 
@@ -58,13 +58,13 @@
         
         for($i = 0; $i < 3; $i++)
         {
-          $randomProductIndex = rand(0, sizeof($result));
+          $randomProductIndex = rand(0, sizeof($result) - 1);
 
           echo "<form action='../../controller/FormHandlerCart.php' method='post' class='product-container'>"; 
           echo "<p>ID:" . $result[$randomProductIndex]["id"] . "</p>";
-          echo "<h1>ID:" . $result[$randomProductIndex]["productName"] . "</h1>";
+          echo "<h1>" . $result[$randomProductIndex]["productName"] . "</h1>";
           echo "<input type='hidden' name='product-name' value='" . $result[$randomProductIndex]["productName"] . "'>";
-          echo "<p>ID:" . $result[$randomProductIndex]["price"] . "</p>";
+          echo "<p>Price:" . $result[$randomProductIndex]["price"] . "</p>";
           echo "<h2>Processor speed</h2>";
           echo "<p>Base clock speed:" . $result[$randomProductIndex]["base_clock"] . "</p>";
           echo "<p>Boosted clock speed:" . $result[$randomProductIndex]["boosted_clock"] . "</p>";
