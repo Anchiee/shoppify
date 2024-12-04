@@ -92,7 +92,7 @@
             }
           }
 
-          echo "<button class='check-out'>Check out</button>";
+          echo "<button class='check-out'>Add to cart</button>";
 
           echo "</div>";
         }
