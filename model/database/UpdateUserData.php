@@ -42,10 +42,45 @@ function updateUser($field, $newValue)
     $stmt = null;
 
   } catch(PDOException $e) {
-    echo "Query failed:" . $e->getMessage();
-    die();
+    return "Query failed:" . $e->getMessage();
   }
   
+}
 
+
+function updateCart($productName)
+{
+  require "dbh.php";
+  require_once "../configurations/config.php";
+
+  try {
+
+
+    $username = $_SESSION["username"];
+
+    $query = "SELECT id FROM users WHERE username = :username;";
+    $stmt = $pdo->prepare($query);
+
+    $stmt->bindParam(":username", $username);
+    $stmt->execute();
+
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+
+    $query = "INSERT INTO cart(user_id, productName) VALUES(:user_id, :productName);";
+    $stmt = $pdo->prepare($query);
+
+    $stmt->bindParam(":user_id", $result["id"]);
+    $stmt->bindParam(":productName", $productName);
+    $stmt->execute();
+
+    $pdo = null;
+    $stmt = null;
+
+    $_SESSION["user-id"] = $result["id"];
+
+  } catch(PDOException $e) {
+    return "Query failed:" . $e->getMessage();
+  }
 
 }

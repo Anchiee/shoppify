@@ -21,7 +21,35 @@ function returnProducts($productName)
     return $result;
 
   } catch(PDOException $e) {
-    echo "Query failed:" . $e->getMessage();
-    return " ";
+    return "Query failed:" . $e->getMessage();
   }
+}
+
+
+function returnCart()
+{
+  try {
+
+    require "dbh.php";
+    require "../../configurations/config.php";
+
+    $userId = $_SESSION["user-id"];
+
+    $query = "SELECT * FROM cart WHERE user_id = :userId;";
+    $stmt = $pdo->prepare($query);
+
+    $stmt->bindParam(":userId", $userId);
+    $stmt->execute();
+
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $pdo = null;
+    $stmt = null;
+
+    return $result;
+
+  } catch(PDOException $e) {
+    return "Query failed:" . $e->getMessage();
+  }
+  
 }

@@ -22,7 +22,6 @@ function ReadUsername($username)
 
 
   } catch(PDOException $e) {
-    echo "Query failed:" . $e->getMessage();
-    return "";
+    return "Query failed:" . $e->getMessage();
   }
 }

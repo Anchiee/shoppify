@@ -25,7 +25,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     die();
     
   } catch(PDOException $e) {
-    echo "Query failed:" . $e->getMessage();
-    die();
+    return "Query failed:" . $e->getMessage();
   }
 }

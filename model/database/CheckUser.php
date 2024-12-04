@@ -43,10 +43,8 @@ function checkPassword($usernamePOST, $passwordPOST)
 
 
   } catch(PDOException $e) {
-    echo "Query failed:" . $e->getMessage();
-    die();
+    return "Query failed:" . $e->getMessage();
   } catch(Exception $e) {
-    echo "Wrong username/password";
-    die();
+    return "Wrong username/password";
   }
 }

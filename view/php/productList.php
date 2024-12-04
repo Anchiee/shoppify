@@ -73,6 +73,7 @@
             if($row == "productName")
             {
               echo "<h1>$value </h1>";
+              echo "<input type='hidden' name='product-name' value='$value'>";
               continue;
             }
             else if($row == "price")

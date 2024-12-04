@@ -27,7 +27,6 @@ function AddUser($username, $password, $email, $phone)
     die();
 
   } catch(PDOException $e) {
-    echo "Query failed:" . $e->getMessage();
-    die();
+    return "Query failed:" . $e->getMessage();
   }
 }
