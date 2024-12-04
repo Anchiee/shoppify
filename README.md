@@ -23,6 +23,9 @@ clone the repository `git clone https://github.com/Anchiee/DlaOlci.git`
 <p>navigate to the repository directory</p>
 
 
+<h1>Disclaimer</h1>
+
+<p>I used AI in some work to make it easier, such as products parameters in MySQL database, so some info might be fake about the products. I used AI in "about" section to make FAQ questions and answers</p>
 
 <h1>Contact</h1>
 
