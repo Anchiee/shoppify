@@ -60,6 +60,24 @@ input::-webkit-search-cancel-button {
 }
 
 
+.products-container
+{
+  position:absolute;
+  top:100%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  border-top: 2px solid #c0b9b1;
+  width: 85%;
+}
+
+.suggested-header
+{
+  display: block;
+  color: #c0b9b1;
+  text-align: center;
+}
+
+
 @media only screen and (max-width:767px)
 {
 
