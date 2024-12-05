@@ -15,6 +15,8 @@
     echo "You have to log in!";
     die();
   }
+
+  $_SESSION["user-id"] = $result[0]["id"];
   
 ?>
 

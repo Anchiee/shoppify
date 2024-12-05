@@ -16,7 +16,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   $productName = $_POST["product-name"];
   updateCart($productName);
 
-  header("Location: ../view/php/userCart.php");
+  header("Location: ../view/php/shop.php");
   die();
 
 }
