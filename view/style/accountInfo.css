@@ -121,3 +121,8 @@ input
   background-color:#5f2828;
 }
 
+
+#cart
+{
+  display: block;
+}

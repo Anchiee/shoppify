@@ -3,4 +3,11 @@
 require "../../model/database/ReadProducts.php";
 
 
-print_r(returnCart());
+if(empty(returnCart()))
+{
+  echo "you dont have any products added";
+}
+else
+{
+  print_r(returnCart());
+}

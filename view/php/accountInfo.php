@@ -93,6 +93,11 @@
           <button class="change-button" onclick="showPhone()">
           <i class="fa-regular fa-pen-to-square fa-2xl" class="icon"></i>
           </button>
+            
+          
+            <button class="manipulate-button" id="cart" onclick="redirectToCart()">
+              Cart
+            </button>
         </div>
         
         <div class="buttons-container">

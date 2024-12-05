@@ -48,3 +48,8 @@ function hidePhone()
 {
   phoneForm.style.display = "none";
 }
+
+function redirectToCart()
+{
+  window.location.href = "../php/userCart.php";
+}
