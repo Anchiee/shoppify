@@ -110,7 +110,7 @@
             </button>
           </form>
           
-          <form action="../../model/database/DeleteUserData.php" method="post" class="manipulate-form">
+          <form action="../../controller/FormHandlerDeleteAccount.php" method="post" class="manipulate-form">
             <button class="manipulate-button" id="delete-account">
               Delete
             </button>
