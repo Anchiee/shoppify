@@ -24,9 +24,9 @@ try {
 <html lang="en">
   <head>
     <title>Cart</title>
-    <link rel="stylesheet" href="../style/login.css">
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/body.css">
+    <link rel="stylesheet" href="../style/productList.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,8 +62,87 @@ try {
     </div>
 
     <?php
-      print_r($result); 
-    ?>
+
+      $cartProducts = array();
+      foreach($result as $column)
+      {
+        array_push($cartProducts, $column["productName"]);
+      }
+
+
+      $result = array();
+      foreach($cartProducts as $index)
+      {
+        array_push($result, returnProducts($index));
+      }
+
+     
+      $flattenedResult = [];
+
+      foreach($result as $key)
+      {
+        if(isset($key[0]))
+        {
+          $flattenedResult[] = $key[0];
+        }
+        
+      }
+      ?>
+
+
+      <div class="container">
+        <?php
+
+        foreach($flattenedResult as $column)
+          {
+            echo "<form action='#' method='post' class='product-container'>"; 
+            foreach($column as $row => $value)
+            { 
+              if($row == "id")
+              {
+                echo "<p>ID: $value</p>";
+                continue;
+              }
+              if($row == "productName")
+              {
+                echo "<h1>$value </h1>";
+                echo "<input type='hidden' name='product-name' value='$value'>";
+                continue;
+              }
+              else if($row == "price")
+              {
+                echo "<p>$value$ </p>";
+                continue;
+              }
+              else if($row == "base_clock")
+              {
+                echo "<h2>Processor speed</h2>";
+                echo "<p>Base clock speed: $value </p>";
+                continue;
+              }
+              else if($row == "boosted_clock")
+              {
+                echo "<p>Boosted clock speed: $value </p>";
+                continue;
+              }
+              else
+              {
+                echo "<p>$row: $value </p>";
+              }
+            }
+
+            echo "<button class='check-out'>
+            <i class='fa-solid fa-trash-can fa-xl'></i>
+            </button>";
+
+            echo "</form>";
+          }
+          ?>
+    
+
+      </div>
+
+
       
     
 
