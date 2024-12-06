@@ -51,11 +51,10 @@ function updateUser($field, $newValue)
 function updateCart($productName)
 {
   require "dbh.php";
+  require "ReadProducts.php";
   require_once "../configurations/config.php";
 
   try {
-
-
     $username = $_SESSION["username"];
 
     $query = "SELECT id FROM users WHERE username = :username;";
@@ -66,11 +65,15 @@ function updateCart($productName)
 
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
+    $productId = returnProducts($productName);
 
-    $query = "INSERT INTO cart(user_id, productName) VALUES(:user_id, :productName);";
+    $query = "INSERT INTO cart(user_id, product_id, productName) VALUES(:user_id, :product_id, :productName);";
     $stmt = $pdo->prepare($query);
 
+
+
     $stmt->bindParam(":user_id", $result["id"]);
+    $stmt->bindParam(":product_id", $productId[0]["id"]);
     $stmt->bindParam(":productName", $productName);
     $stmt->execute();
 
@@ -78,6 +81,7 @@ function updateCart($productName)
     $stmt = null;
 
     $_SESSION["user-id"] = $result["id"];
+    die();
 
   } catch(PDOException $e) {
     return "Query failed:" . $e->getMessage();

@@ -29,3 +29,33 @@ function deleteUserAccount()
     return "Query failed:" . $e->getMessage();
   }
 }
+
+
+function deleteFromCart($productId, $userId)
+{
+  require "dbh.php";
+
+
+  try {
+
+    $query = "DELETE FROM cart WHERE product_id = :productId AND user_id = :userId;";
+
+    $stmt = $pdo->prepare($query);
+
+
+    $stmt->bindParam(":productId", $productId);
+    $stmt->bindParam(":userId", $userId);
+
+    if (!$stmt->execute()) {
+      print_r($stmt->errorInfo());
+  }
+
+    $stmt = null;
+    $pdo = null;
+
+
+  } catch(PDOException $e) {
+    return $e->getMessage();
+  }
+
+}

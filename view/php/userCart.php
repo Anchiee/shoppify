@@ -95,12 +95,13 @@ try {
 
         foreach($flattenedResult as $column)
           {
-            echo "<form action='#' method='post' class='product-container'>"; 
+            echo "<form action='../../controller/FormHandlerDeleteFromCart.php' method='post' class='product-container'>"; 
             foreach($column as $row => $value)
             { 
               if($row == "id")
               {
-                echo "<p>ID: $value</p>";
+                echo "<p>ID: $value</p>
+                <input type='hidden' name='product-id' value='$value'";
                 continue;
               }
               if($row == "productName")
