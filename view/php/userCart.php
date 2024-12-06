@@ -38,11 +38,11 @@ try {
   <body>
     <div class="nav">
       <a href="./register.php" class="nav-options">Sign-in</a>
-      <a href="#" class="nav-options" id="chosen-option">Log-in</a>
+      <a href="#" class="nav-options">Log-in</a>
       <a href="./about.php" class="nav-options">About</a>
       <a href="./contact.php" class="nav-options">Contact</a>
       <a href="./shop.php" class="nav-options">Shop</a>
-      <a href="./accountInfo.php" class="nav-options">Account info</a>
+      <a href="./accountInfo.php" class="nav-options" id="chosen-option">Account info</a>
     </div>
 
 
