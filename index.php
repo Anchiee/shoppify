@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="./view/style/index.css">
     <link rel="stylesheet" href="./view/style/header.css">
     <link rel="stylesheet" href="./view/style/body.css">
+    <link rel="icon" href="assets/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">

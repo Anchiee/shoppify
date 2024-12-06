@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="../style/accountInfo.css">
   <link rel="stylesheet" href="../style/header.css">
   <link rel="stylesheet" href="../style/body.css">
+  <link rel="icon" href="../../assets/logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
