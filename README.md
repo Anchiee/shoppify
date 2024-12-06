@@ -25,7 +25,7 @@ clone the repository `git clone https://github.com/Anchiee/DlaOlci.git`
 
 <h1>Disclaimer</h1>
 
-<p>I used AI in some work to make it easier, such as products parameters in MySQL database, so some info might be fake about the products. I used AI in "about" section to make FAQ questions and answers</p>
+<p>I used AI in some work to make it easier, such as products parameters in MySQL database, so some info might be fake about the products. I used AI in "about" section to make FAQ section and the website logo</p>
 
 <h1>Contact</h1>
 
