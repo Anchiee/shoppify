@@ -5,7 +5,7 @@
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
   require_once "../model/database/CheckUser.php";
-  require "../model/database/InsertUser.php";
+  require_once "../model/database/InsertUser.php";
 
   
   $username = htmlspecialchars($_POST["username"]);

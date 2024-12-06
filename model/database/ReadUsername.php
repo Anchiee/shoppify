@@ -5,7 +5,7 @@ function ReadUsername($username)
 {
   try {
 
-    require "dbh.php";
+    require_once "dbh.php";
 
     $query = "SELECT * FROM users WHERE username = :username;";
     $stmt = $pdo->prepare($query);

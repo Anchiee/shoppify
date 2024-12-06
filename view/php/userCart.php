@@ -101,12 +101,12 @@ try {
               if($row == "id")
               {
                 echo "<p>ID: $value</p>
-                <input type='hidden' name='product-id' value='$value'";
+                <input type='hidden' name='product-id' value='$value'>";
                 continue;
               }
               if($row == "productName")
               {
-                echo "<h1>$value </h1>";
+                echo "<h1>$value</h1>";
                 echo "<input type='hidden' name='product-name' value='$value'>";
                 continue;
               }

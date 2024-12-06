@@ -51,8 +51,8 @@ function updateUser($field, $newValue)
 function updateCart($productName)
 {
   require "dbh.php";
-  require "ReadProducts.php";
-  require_once "../configurations/config.php";
+  require_once "ReadProducts.php";
+  require "../configurations/config.php";
 
   try {
     $username = $_SESSION["username"];

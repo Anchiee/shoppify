@@ -5,7 +5,7 @@ function AddUser($username, $password, $email, $phone)
 {
   try {
 
-    require "../model/database/dbh.php";
+    require_once "../model/database/dbh.php";
     require_once "../configurations/config.php";
 
     $query = "INSERT INTO users(username, passwrd, email, phone) VALUES(:username, :passwrd, :email, :phone);";

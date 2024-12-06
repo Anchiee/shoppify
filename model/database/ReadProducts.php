@@ -29,7 +29,7 @@ function returnAllProducts()
 {
   try {
 
-    require "dbh.php";
+    require_once "dbh.php";
 
     $query = "SELECT * FROM products;";
     $stmt = $pdo->prepare($query);
@@ -53,8 +53,8 @@ function returnCart()
 {
   try {
 
-    require "dbh.php";
-    require "../../configurations/config.php";
+    require_once "dbh.php";
+    require_once "../../configurations/config.php";
 
     $userId = $_SESSION["user-id"];
 
@@ -75,4 +75,28 @@ function returnCart()
     return "Query failed:" . $e->getMessage();
   }
   
+}
+
+function productExists($productName)
+{
+  try {
+
+    require_once "dbh.php";
+
+    $query = "SELECT * FROM cart WHERE productName = :productName;";
+    $stmt = $pdo->prepare($query);
+
+    $stmt->bindParam(":productName", $productName);
+    $stmt->execute();
+
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $pdo = null;
+    $stmt = null;
+
+    return !empty($result);
+
+  } catch(PDOException $e) {
+    return "Query failed:" . $e->getMessage();
+  }
 }

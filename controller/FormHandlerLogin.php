@@ -5,8 +5,8 @@
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
 
-  require "../model/database/CheckUser.php";
-  require "../configurations/config.php";
+  require_once "../model/database/CheckUser.php";
+  require_once "../configurations/config.php";
   
   $usernamePOST = htmlspecialchars($_POST["username"]);
   $passwordPOST = htmlspecialchars($_POST["password"]);

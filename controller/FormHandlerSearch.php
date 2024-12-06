@@ -4,8 +4,8 @@
 if($_SERVER["REQUEST_METHOD"] == "GET")
 {
 
-  require "../model/database/ReadProducts.php";
-  require "../configurations/config.php";
+  require_once "../model/database/ReadProducts.php";
+  require_once "../configurations/config.php";
 
   $product = htmlspecialchars(strtolower($_GET["search"]));
 

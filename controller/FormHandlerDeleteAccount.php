@@ -2,7 +2,7 @@
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-  require "../model/database/DeleteUserData.php";
+  require_once "../model/database/DeleteUserData.php";
 
   deleteUserAccount();
 }

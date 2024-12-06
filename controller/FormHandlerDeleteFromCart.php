@@ -2,8 +2,8 @@
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-  require "../configurations/config.php";
-  require "../model/database/DeleteUserData.php";
+  require_once "../configurations/config.php";
+  require_once "../model/database/DeleteUserData.php";
 
   $userId = $_SESSION["user-id"];
   $id = $_POST["product-id"];
