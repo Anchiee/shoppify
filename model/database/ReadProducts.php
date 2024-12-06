@@ -82,11 +82,15 @@ function productExists($productName)
   try {
 
     require_once "dbh.php";
+    require_once "../configurations/config.php";
 
-    $query = "SELECT * FROM cart WHERE productName = :productName;";
+    $query = "SELECT * FROM cart WHERE productName = :productName AND user_id = :userId;";
     $stmt = $pdo->prepare($query);
 
+    $userId = $_SESSION["user-id"];
+
     $stmt->bindParam(":productName", $productName);
+    $stmt->bindParam(":userId", $userId);
     $stmt->execute();
 
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
