@@ -5,6 +5,9 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <meta property="og:title" content="Shoppify">
+    <meta property="og:description" content="Shopping website. Shop whenever and whatever you want!">
+    <meta property="og:image" content="../../assets/logo.png">
     <link rel="stylesheet" href="../style/about.css">
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/body.css">
