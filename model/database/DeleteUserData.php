@@ -6,7 +6,7 @@ function deleteUserAccount()
   try {
 
     require "dbh.php";
-    require "../../configurations/config.php";
+    require "../configurations/config.php";
 
     $username = $_SESSION["username"];
 
@@ -21,7 +21,6 @@ function deleteUserAccount()
 
     session_destroy();
 
-    header("Location: ../../view/php/register.php");
     
     die();
     
