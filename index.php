@@ -29,7 +29,7 @@
     
     <div class="hamburger-nav">
       <a href="javascript:void(0);" id="icon" onclick="navManipulation()">
-        <i class="fa-solid fa-bars fa-2xl" style="color: #c3b1ad;"></i>
+        <i class="fa-solid fa-bars fa-2xl" ></i>
       </a>
       <p class="hamburger-header">Shoppify</p>
 
