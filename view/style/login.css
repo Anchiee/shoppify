@@ -7,7 +7,7 @@ form
   display:inline-block;
   position:absolute;
   left:50%;
-  bottom:-25%;
+  top:55%;
   transform:translate(-50%, -50%);
   padding: 100px 100px;
   border-radius: 0.3rem;
@@ -117,7 +117,7 @@ form
 
   .login-container
   {
-    bottom: -45%;
+    top: 50%;
   }
 
   .login-button
@@ -139,7 +139,7 @@ form
 
   .login-container
   {
-    bottom: -5%;
+    top:50%;
   }
 
   .login-button
