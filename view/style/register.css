@@ -154,7 +154,7 @@ form
 
   .sign-container
   {
-    bottom: -25%;
+    bottom: -10%;
     padding: 50px 150px;
   }
 
@@ -162,7 +162,7 @@ form
   {
     padding-bottom:6px;
     padding-right: 10px;
-    width:200%;
+    width:150%;
     font-size:23px;
     margin-bottom:50px;
     margin-left:-70px;
