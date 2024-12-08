@@ -126,3 +126,24 @@ input
 {
   display: block;
 }
+
+
+@media only screen and (max-width: 767px)
+{
+  .account-info-container
+  {
+    padding: 30px 40px;
+  }
+}
+
+
+@media only screen and (min-width:768px) and (max-width:1280px)
+{
+  .account-info-container
+  {
+    top:55%;
+  }
+ 
+}
+
+
