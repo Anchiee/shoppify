@@ -25,7 +25,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   }
   else
   {
-    echo "Wrong password/username";
+    $_SESSION["error-info"] = "Wrong password/username";
+    header("Location: ../view/php/errors/LoginError.php");
     die();
   }
  

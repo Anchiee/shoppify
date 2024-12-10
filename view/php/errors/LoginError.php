@@ -1,3 +1,8 @@
+<?php 
+  require_once "../../../configurations/config.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +10,7 @@
     <link rel="stylesheet" href="../../style/header.css">
     <link rel="stylesheet" href="../../style/body.css">
     <link rel="stylesheet" href="../../style/error.css">
-    <link rel="icon" href="assets/logo.png">
+    <link rel="icon" href="../../../assets/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta property="og:title" content="Shoppify">
@@ -19,10 +24,10 @@
 
   <body>
     <div class="nav">
-      <a href="./view/php/register.php" class="nav-options">Sign-in</a>
-      <a href="./controller/UserRedirect.php" class="nav-options">Log-in</a>
-      <a href="./view/php/about.php" class="nav-options">About</a>
-      <a href="./view/php/accountInfo.php" class="nav-options">Account info</a>
+      <a href="../register.php" class="nav-options">Sign-in</a>
+      <a href="../../../controller/UserRedirect.php" class="nav-options">Log-in</a>
+      <a href="../about.php" class="nav-options">About</a>
+      <a href="../accountInfo.php" class="nav-options">Account info</a>
     </div>
 
     
@@ -34,10 +39,10 @@
 
       
       <div id="links">
-        <a href="./view/php/register.php">Sign-in</a>
-        <a href="./controller/UserRedirect.php">Log-in</a>
-        <a href="./view/php/about.php">About</a>
-        <a href="./view/php/accountInfo.php">Account info</a>
+        <a href="../register.php">Sign-in</a>
+        <a href="../../../controller/UserRedirect.php">Log-in</a>
+        <a href="../about.php">About</a>
+        <a href="../accountInfo.php">Account info</a>
       </div>
     </div>
 
@@ -47,7 +52,12 @@
         Error occured
         <i class="fa-solid fa-triangle-exclamation"></i>
       </h1>
-      <p class="error-info">You have to log in first</p>
+      <p class="error-info">
+        <?php 
+          echo $_SESSION["error-info"];
+      
+        ?>
+      </p>
     </div>
     <script src="./view/js/hamburgerMenu.js"></script>
   </body>
