@@ -18,25 +18,25 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   if(!isset($username) || !isset($password) || !isset($email) || !isset($phone))
   {
     $_SESSION["error-info"] = "Do not leave the input empty!";
-    header("Location: ../view/php/errors/LoginError.php");
+    header("Location: ../view/php/error/Error.php");
     die();
   }
   else if(strlen($username) <= 3 || strlen($password) <= 7)
   {
     $_SESSION["error-info"] = "Username/password too short! Username cant be less than 4 characters and password cant be less than 7";
-    header("Location: ../view/php/errors/LoginError.php");
+    header("Location: ../view/php/error/Error.php");
     die();
   }
   else if(userExists($username))
   {
     $_SESSION["error-info"] = "User already exists";
-    header("Location: ../view/php/errors/LoginError.php");
+    header("Location: ../view/php/error/Error.php");
     die();
   }
   else if(!is_numeric($phone))
   {
     $_SESSION["error-info"] = "Phone number must be a number";
-    header("Location: ../view/php/errors/LoginError.php");
+    header("Location: ../view/php/error/Error.php");
   }
 
   AddUser($username, $password, $email, $phone);

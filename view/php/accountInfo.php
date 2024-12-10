@@ -12,7 +12,8 @@
   try {
     $result = ReadUsername($_SESSION["username"]);
   } catch(Exception $e) {
-    echo "You have to log in!";
+    $_SESSION["error-info"] = "You have to log in";
+    header("Location: error/Error.php");
     die();
   }
 

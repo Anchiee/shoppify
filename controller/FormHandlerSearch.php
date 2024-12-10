@@ -12,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET")
   if(empty($product))
   {
     $_SESSION["error-info"] = "dont leave the input empty";
-    header("Location: ../view/php/errors/LoginError.php");
+    header("Location: ../view/php/error/Error.php");
     die();
   }
 

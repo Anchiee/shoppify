@@ -11,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   if(empty($username))
   {
     $_SESSION["error-info"] = "You have to log in first";
-    header("Location: ../view/php/errors/LoginError.php");
+    header("Location: ../view/php/error/Error.php");
     die();
   }
 
@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   if(productExists($productName))
   {
     $_SESSION["error-info"] = "Product already added to the cart";
-    header("Location: ../view/php/errors/LoginError.php");
+    header("Location: ../view/php/error/Error.php");
     die(); 
   }
   

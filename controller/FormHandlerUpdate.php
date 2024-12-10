@@ -12,13 +12,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   if(empty($newVal)) 
   {
     $_SESSION["error-info"] = "Empty input try again";
-    header("Location: ../view/php/errors/LoginError.php");
+    header("Location: ../view/php/error/Error.php");
     die();
   }
   else if($newVal == "passwrd" && strlen($newVal) <= 7)
   {
     $_SESSION["error-info"] = "Password too short! Password cant be less than 7";
-    header("Location: ../view/php/errors/LoginError.php");
+    header("Location: ../view/php/error/Error.php");
     die();
   }
   
