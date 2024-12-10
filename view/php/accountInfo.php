@@ -205,5 +205,6 @@
 
 
 <script src="../js/accountInfo.js"></script>
+<script src="../js/hamburgerMenu.js"></script>
 </body>
 </html>
