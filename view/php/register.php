@@ -21,7 +21,6 @@
       <a href="#" class="nav-options" id="chosen-option">Sign-in</a>
       <a href="../../controller/UserRedirect.php" class="nav-options">Log-in</a>
       <a href="./about.php" class="nav-options">About</a>
-      <a href="./contact.php" class="nav-options">Contact</a>
       <a href="./shop.php" class="nav-options">Shop</a>
       <a href="./accountInfo.php" class="nav-options">Account info</a>
     </div>
@@ -36,7 +35,6 @@
       <div id="links">
         <a href="../../controller/UserRedirect.php">Log-in</a>
         <a href="./about.php">About</a>
-        <a href="./contact.php">Contact</a>
         <a href="./shop.php">Shop</a>
         <a href="./accountInfo.php">Account info</a>
       </div>

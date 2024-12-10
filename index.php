@@ -22,7 +22,6 @@
       <a href="./view/php/register.php" class="nav-options">Sign-in</a>
       <a href="./controller/UserRedirect.php" class="nav-options">Log-in</a>
       <a href="./view/php/about.php" class="nav-options">About</a>
-      <a href="./view/php/contact.php" class="nav-options">Contact</a>
       <a href="./view/php/accountInfo.php" class="nav-options">Account info</a>
     </div>
 
@@ -38,7 +37,6 @@
         <a href="./view/php/register.php">Sign-in</a>
         <a href="./controller/UserRedirect.php">Log-in</a>
         <a href="./view/php/about.php">About</a>
-        <a href="./view/php/contact.php">Contact</a>
         <a href="./view/php/accountInfo.php">Account info</a>
       </div>
 
