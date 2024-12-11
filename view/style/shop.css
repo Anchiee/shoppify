@@ -68,6 +68,7 @@ input::-webkit-search-cancel-button {
   transform: translate(-50%, -50%);
   border-top: 2px solid #c0b9b1;
   width: 85%;
+  margin-top:15px;
 }
 
 .suggested-header

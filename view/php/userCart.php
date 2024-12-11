@@ -37,33 +37,33 @@ $title = "Cart";
 
   <main>
 
-  <?php
+    <?php
 
-    $cartProducts = array();
-    foreach($result as $column)
-    {
-      array_push($cartProducts, $column["productName"]);
-    }
-
-
-    $result = array();
-    foreach($cartProducts as $index)
-    {
-      array_push($result, returnProducts($index));
-    }
-
-    
-    $flattenedResult = [];
-
-    foreach($result as $key)
-    {
-      if(isset($key[0]))
+      $cartProducts = array();
+      foreach($result as $column)
       {
-        $flattenedResult[] = $key[0];
+        array_push($cartProducts, $column["productName"]);
       }
+
+
+      $result = array();
+      foreach($cartProducts as $index)
+      {
+        array_push($result, returnProducts($index));
+      }
+
       
-    }
-    ?>
+      $flattenedResult = [];
+
+      foreach($result as $key)
+      {
+        if(isset($key[0]))
+        {
+          $flattenedResult[] = $key[0];
+        }
+        
+      }
+      ?>
 
 
     <div class="container">

@@ -1,7 +1,7 @@
 .container
 {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-top:180px;
 }
 
@@ -17,7 +17,6 @@ p
 {
   margin-bottom: 25px;
 }
-
 
 
 
