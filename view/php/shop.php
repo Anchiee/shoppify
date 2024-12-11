@@ -3,18 +3,21 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <?php include "templates/head.php"?>
-    <link rel="stylesheet" href="../style/shop.css">
-    <link rel="stylesheet" href="../style/header.css">
-    <link rel="stylesheet" href="../style/body.css">
-    <link rel="stylesheet" href="../style/productList.css">
-  </head>
+<head>
+  <?php include "templates/head.php"?>
+  <link rel="stylesheet" href="../style/shop.css">
+  <link rel="stylesheet" href="../style/header.css">
+  <link rel="stylesheet" href="../style/body.css">
+  <link rel="stylesheet" href="../style/productList.css">
+</head>
 
-  <body>
+<body>
 
+  <nav>
     <?php include "templates/nav.php"?>
+  </nav>
 
+  <main>
     <form action="../../controller/FormHandlerSearch.php" method="get" class="search-form">
         <input type="search" placeholder="Search for products" class="search-input" name="search">
         <button>Search</button>
@@ -55,10 +58,11 @@
 
       
     </div>
+</main>
 
 
 
-  <script src="../js/hamburgerMenu.js"></script>
-  </body>
+<script src="../js/hamburgerMenu.js"></script>
+</body>
 
 </html>

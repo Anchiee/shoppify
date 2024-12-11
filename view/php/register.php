@@ -2,17 +2,20 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <?php include "templates/head.php"?>
-    <link rel="stylesheet" href="../style/register.css">
-    <link rel="stylesheet" href="../style/header.css">
-    <link rel="stylesheet" href="../style/body.css">
-    <link rel="icon" href="../../assets/logo.png">
-  </head>
-  
-  <body>
-    <?php include "templates/nav.php"?>
+<head>
+  <?php include "templates/head.php"?>
+  <link rel="stylesheet" href="../style/register.css">
+  <link rel="stylesheet" href="../style/header.css">
+  <link rel="stylesheet" href="../style/body.css">
+  <link rel="icon" href="../../assets/logo.png">
+</head>
 
+<body>
+  <nav>
+    <?php include "templates/nav.php"?>
+  </nav>
+
+  <main>
     <form action="../../controller/FormHandlerRegister.php" method="post">
       <input type="text" placeholder="Enter your username" class="input" name="username" required>
       <input type="password" placeholder="Enter your password" class="input" name="password" required>
@@ -36,7 +39,8 @@
       </div>
       
     </form>
+</main>
 
-  <script src="../js/hamburgerMenu.js"></script>
-  </body>
+<script src="../js/hamburgerMenu.js"></script>
+</body>
 </html>

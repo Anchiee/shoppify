@@ -14,10 +14,11 @@
 
 <body>
     
-
+  <nav>
     <?php include "templates/nav.php"?>  
+  </nav>
 
-
+  <main>
     <form action="../../controller/FormHandlerSearch.php" method="get" class="search-form">
         <input type="search" placeholder="Search for products" class="search-input" name="search">
         <button>Search</button>
@@ -79,6 +80,7 @@
 
       ?>
     </div>
+  </main>
 
 
 

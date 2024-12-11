@@ -11,11 +11,12 @@
   </head>
   <body>
     
-    <?php 
-      include "templates/nav.php"?>
-
-
-    <div class="about-body">
+    <nav>
+      <?php include "templates/nav.php"?>
+    </nav>
+    
+    <main>
+      <div class="about-body">
       <h1>FAQ</h1>
 
       <ol class="questions">
@@ -315,6 +316,7 @@
                   
         </ol>
     </div>
+  </main>
 
   <script src="../js/about.js"></script>
   <script src="../js/hamburgerMenu.js"></script>

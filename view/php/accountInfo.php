@@ -36,8 +36,11 @@
 </head>
 <body>
 
+  <nav>
     <?php include "templates/nav.php"?>
+  </nav>
 
+  <main>
     <div class="account-info-container">
         
       <div class="inner-info-container">
@@ -174,6 +177,7 @@
       
     
     </form>
+  </main>
 
 
 <script src="../js/accountInfo.js"></script>
