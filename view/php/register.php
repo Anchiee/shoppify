@@ -26,16 +26,7 @@
 
       
       <div class="login-container">
-        <p class="login-text">Already have an account? &#8226; <a href="./login.php" class="login-option">Log-in</a></p>
-        <p class="platforms-text">use other platforms</p>
-
-        <div class="platforms">
-          <i class="fa-brands fa-discord fa-lg" style="color: #858282;"></i>
-          <i class="fa-brands fa-google fa-lg" style="color: #858282;"></i>
-          <i class="fa-brands fa-facebook fa-lg" style="color: #858282;"></i>
-          <i class="fa-brands fa-microsoft fa-lg" style="color: #858282;"></i>
-        </div>
-        
+        <p class="login-text">Already have an account? &#8226; <a href="./login.php" class="login-option">Log-in</a></p>        
       </div>
       
     </form>

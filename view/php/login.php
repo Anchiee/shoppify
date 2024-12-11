@@ -25,15 +25,6 @@
 
       <div class="sign-container">
         <p class="sign-text">Don't have an account? &#8226; <a href="./register.php" class="sign-option">Sign-in</a></p>
-        <p class="platforms-text">use other platforms</p>
-
-        <div class="platforms">
-          <i class="fa-brands fa-discord fa-lg" style="color: #858282;"></i>
-          <i class="fa-brands fa-google fa-lg" style="color: #858282;"></i>
-          <i class="fa-brands fa-facebook fa-lg" style="color: #858282;"></i>
-          <i class="fa-brands fa-microsoft fa-lg" style="color: #858282;"></i>
-        </div>
-        
       </div>
       
     </form>
