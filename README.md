@@ -1,5 +1,5 @@
 # SHOPPIFY
-<p>Shop whenever and wherever you want!</p>
+<a href="http://shoppify.infinityfreeapp.com" target="_blank">Shop whenever and wherever you want!</p>
 
 
 # 🕯 Features
